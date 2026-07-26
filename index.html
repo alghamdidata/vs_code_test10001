@@ -119,6 +119,24 @@
             transform: scale(0.98);
         }
 
+        .links {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .links a {
+            color: #667eea;
+            text-decoration: none;
+            font-size: 0.9em;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        .links a:hover {
+            color: #764ba2;
+            text-decoration: underline;
+        }
+
         @media (max-width: 600px) {
             .container {
                 padding: 40px 30px;
@@ -161,6 +179,10 @@
 
             <button type="submit" class="submit-button">Continue</button>
         </form>
+
+        <div class="links">
+            <a href="history.html">View History</a>
+        </div>
     </div>
 
     <script>
@@ -169,9 +191,19 @@
 
             const name = document.getElementById('name').value;
             const wants = document.getElementById('wants').value;
+            const timestamp = new Date().toLocaleString();
 
             localStorage.setItem('userName', name);
             localStorage.setItem('userWants', wants);
+
+            // Save to history
+            let entries = JSON.parse(localStorage.getItem('userEntries') || '[]');
+            entries.push({
+                name: name,
+                wants: wants,
+                date: timestamp
+            });
+            localStorage.setItem('userEntries', JSON.stringify(entries));
 
             window.location.href = 'page2.html';
         });

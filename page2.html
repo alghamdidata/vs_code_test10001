@@ -147,6 +147,24 @@
             transform: scale(1.05);
         }
 
+        .links {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .links a {
+            color: #667eea;
+            text-decoration: none;
+            font-size: 0.9em;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        .links a:hover {
+            color: #764ba2;
+            text-decoration: underline;
+        }
+
         @media (max-width: 600px) {
             .container {
                 padding: 40px 25px;
@@ -193,6 +211,10 @@
         <div class="action-buttons">
             <button class="btn btn-primary" onclick="startJourney()">Let's Go! 🚀</button>
             <button class="btn btn-secondary" onclick="editInfo()">Edit Info</button>
+        </div>
+
+        <div class="links">
+            <a href="history.html">View History</a> | <a href="index.html">New Entry</a>
         </div>
     </div>
 
