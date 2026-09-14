@@ -21,3 +21,8 @@ The quality of an AI prompt decides the quality of the result. Giving the AI a r
 
 Files
 Capstone_Project__Abdurlahman_Alghamdi.docx - the full write-up
+
+
+
+Explore more resources, courses, and projects from SDAIA Academy on GitHub: https://github.com/SDAIAAcademy
+
